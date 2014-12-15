@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- This file was auto-generated from WSDL --><!-- by the Apache Axis2 version: 1.6.2  Built on : Apr 17, 2012 (05:33:49 IST) --><serviceGroup>
+    <service name="simpleblog">
+        <messageReceivers>
+            <messageReceiver mep="http://www.w3.org/ns/wsdl/in-out" class="org.wbd.www.simpleblog.SimpleblogMessageReceiverInOut"/>
+        </messageReceivers>
+        <parameter name="ServiceClass">org.wbd.www.simpleblog.SimpleblogSkeleton</parameter>
+        <parameter name="useOriginalwsdl">true</parameter>
+        <parameter name="modifyUserWSDLPortAddress">true</parameter>
+        <operation name="search" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.wbd.org/simpleblog/">
+            <actionMapping>http://www.wbd.org/simpleblog/search</actionMapping>
+            <outputActionMapping>http://www.wbd.org/simpleblog/simpleblog/searchResponse</outputActionMapping>
+        </operation>
+        <operation name="editPost" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.wbd.org/simpleblog/">
+            <actionMapping>http://www.wbd.org/simpleblog/editPost</actionMapping>
+            <outputActionMapping>http://www.wbd.org/simpleblog/simpleblog/editPostResponse</outputActionMapping>
+        </operation>
+        <operation name="publishPost" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.wbd.org/simpleblog/">
+            <actionMapping>http://www.wbd.org/simpleblog/publishPost</actionMapping>
+            <outputActionMapping>http://www.wbd.org/simpleblog/simpleblog/publishPostResponse</outputActionMapping>
+        </operation>
+        <operation name="deleteUser" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.wbd.org/simpleblog/">
+            <actionMapping>http://www.wbd.org/simpleblog/deleteUser</actionMapping>
+            <outputActionMapping>http://www.wbd.org/simpleblog/simpleblog/deleteUserResponse</outputActionMapping>
+        </operation>
+        <operation name="listComment" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.wbd.org/simpleblog/">
+            <actionMapping>http://www.wbd.org/simpleblog/listComment</actionMapping>
+            <outputActionMapping>http://www.wbd.org/simpleblog/simpleblog/listCommentResponse</outputActionMapping>
+        </operation>
+        <operation name="listUser" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.wbd.org/simpleblog/">
+            <actionMapping>http://www.wbd.org/simpleblog/listUser</actionMapping>
+            <outputActionMapping>http://www.wbd.org/simpleblog/simpleblog/listUserResponse</outputActionMapping>
+        </operation>
+        <operation name="addComment" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.wbd.org/simpleblog/">
+            <actionMapping>http://www.wbd.org/simpleblog/addComment</actionMapping>
+            <outputActionMapping>http://www.wbd.org/simpleblog/simpleblog/addCommentResponse</outputActionMapping>
+        </operation>
+        <operation name="deletePost" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.wbd.org/simpleblog/">
+            <actionMapping>http://www.wbd.org/simpleblog/deletePost</actionMapping>
+            <outputActionMapping>http://www.wbd.org/simpleblog/simpleblog/deletePostResponse</outputActionMapping>
+        </operation>
+        <operation name="addUser" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.wbd.org/simpleblog/">
+            <actionMapping>http://www.wbd.org/simpleblog/addUser</actionMapping>
+            <outputActionMapping>http://www.wbd.org/simpleblog/simpleblog/addUserResponse</outputActionMapping>
+        </operation>
+        <operation name="deleteComment" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.wbd.org/simpleblog/">
+            <actionMapping>http://www.wbd.org/simpleblog/deleteComment</actionMapping>
+            <outputActionMapping>http://www.wbd.org/simpleblog/simpleblog/deleteCommentResponse</outputActionMapping>
+        </operation>
+        <operation name="editUser" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.wbd.org/simpleblog/">
+            <actionMapping>http://www.wbd.org/simpleblog/editUser</actionMapping>
+            <outputActionMapping>http://www.wbd.org/simpleblog/simpleblog/editUserResponse</outputActionMapping>
+        </operation>
+        <operation name="addPost" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.wbd.org/simpleblog/">
+            <actionMapping>http://www.wbd.org/simpleblog/addPost</actionMapping>
+            <outputActionMapping>http://www.wbd.org/simpleblog/simpleblog/addPostResponse</outputActionMapping>
+        </operation>
+        <operation name="listPost" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.wbd.org/simpleblog/">
+            <actionMapping>http://www.wbd.org/simpleblog/listPost</actionMapping>
+            <outputActionMapping>http://www.wbd.org/simpleblog/simpleblog/listPostResponse</outputActionMapping>
+        </operation>
+    </service>
+</serviceGroup>
