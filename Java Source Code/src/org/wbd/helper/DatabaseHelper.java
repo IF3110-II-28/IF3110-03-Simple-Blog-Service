@@ -17,6 +17,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Date;
 import java.text.SimpleDateFormat;
+import java.util.Random;
 
 import net.thegreshams.firebase4j.service.Firebase;
 import net.thegreshams.firebase4j.error.FirebaseException;
@@ -223,6 +224,27 @@ public class DatabaseHelper {
 	
 	public void addPost(String username, String title, Date date, String content) {
 		try {
+		String nantoka = "abcdefghijklmnopqrstuvwxyz1234567890";
+		String id = "";
+		Random rand = new Random();
+		for(int i = 0; i < 15; i++) {
+			id += nantoka.charAt(rand.nextInt(35));
+		}
+		Map<String, Object> dataMap = new LinkedHashMap<String, Object>();
+		Map<String, Object> dataMap2 = new LinkedHashMap<String, Object>();
+		dataMap2.put("author", username);
+		dataMap2.put("title", title);
+		dataMap2.put("date", date);
+		dataMap2.put("content", content);
+		dataMap2.put("published", false);
+		dataMap2.put(id, dataMap2);
+		firebase.put("Post", dataMap);
+		} catch (FirebaseException e) {
+			
+		} catch (JacksonUtilityException e){
+			
+		}
+		/*try {
 			connectDatabase(URL, USER, PASSWORD);
 			
 			statement = conn.prepareStatement("SELECT id FROM user WHERE username = ?");
@@ -249,6 +271,7 @@ public class DatabaseHelper {
 			clearStatement();
 			disconnectDatabase();
 		}
+		*/
 	}
 	
 	public void publishPost(int postId) {
@@ -529,7 +552,7 @@ public class DatabaseHelper {
 		} 
 	}
 	
-	private void connectDatabase(String url, String user, String password) {
+	/*private void connectDatabase(String url, String user, String password) {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			conn = DriverManager.getConnection(url, user, password);
@@ -573,5 +596,6 @@ public class DatabaseHelper {
 			logger.log(Level.SEVERE, ex.getMessage(), ex);
 		}
 	}
+	*/
 	
 }
