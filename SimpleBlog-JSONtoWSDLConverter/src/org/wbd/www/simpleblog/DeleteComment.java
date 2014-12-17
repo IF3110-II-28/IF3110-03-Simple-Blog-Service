@@ -26,18 +26,48 @@
             
 
                         /**
-                        * field for Id
+                        * field for PostId
                         */
 
                         
-                                    protected int localId ;
+                                    protected java.lang.String localPostId ;
                                 
 
                            /**
                            * Auto generated getter method
-                           * @return int
+                           * @return java.lang.String
                            */
-                           public  int getId(){
+                           public  java.lang.String getPostId(){
+                               return localPostId;
+                           }
+
+                           
+                        
+                            /**
+                               * Auto generated setter method
+                               * @param param PostId
+                               */
+                               public void setPostId(java.lang.String param){
+                            
+                                            this.localPostId=param;
+                                    
+
+                               }
+                            
+
+                        /**
+                        * field for Id
+                        */
+
+                        
+                                    protected java.lang.String localId ;
+                                
+
+                           /**
+                           * Auto generated getter method
+                           * @return java.lang.String
+                           */
+                           public  java.lang.String getId(){
                                return localId;
                            }
 
@@ -47,7 +77,7 @@
                                * Auto generated setter method
                                * @param param Id
                                */
-                               public void setId(int param){
+                               public void setId(java.lang.String param){
                             
                                             this.localId=param;
                                     
@@ -115,15 +145,38 @@
                    }
                
                                     namespace = "";
+                                    writeStartElement(null, namespace, "postId", xmlWriter);
+                             
+
+                                          if (localPostId==null){
+                                              // write the nil attribute
+                                              
+                                                     writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","nil","1",xmlWriter);
+                                                  
+                                          }else{
+
+                                        
+                                                   xmlWriter.writeCharacters(localPostId);
+                                            
+                                          }
+                                    
+                                   xmlWriter.writeEndElement();
+                             
+                                    namespace = "";
                                     writeStartElement(null, namespace, "id", xmlWriter);
                              
-                                               if (localId==java.lang.Integer.MIN_VALUE) {
-                                           
-                                                         writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","nil","1",xmlWriter);
-                                                      
-                                               } else {
-                                                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localId));
-                                               }
+
+                                          if (localId==null){
+                                              // write the nil attribute
+                                              
+                                                     writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","nil","1",xmlWriter);
+                                                  
+                                          }else{
+
+                                        
+                                                   xmlWriter.writeCharacters(localId);
+                                            
+                                          }
                                     
                                    xmlWriter.writeEndElement();
                              
@@ -313,11 +366,17 @@
 
                 
                                       elementList.add(new javax.xml.namespace.QName("",
+                                                                      "postId"));
+                                 
+                                         elementList.add(localPostId==null?null:
+                                         org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localPostId));
+                                    
+                                      elementList.add(new javax.xml.namespace.QName("",
                                                                       "id"));
                                  
-                                elementList.add(
-                                   org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localId));
-                            
+                                         elementList.add(localId==null?null:
+                                         org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localId));
+                                    
 
                 return new org.apache.axis2.databinding.utils.reader.ADBXMLStreamReaderImpl(qName, elementList.toArray(), attribList.toArray());
             
@@ -396,6 +455,35 @@
                                     
                                     while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
                                 
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("","postId").equals(reader.getName())){
+                                
+                                       nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
+                                       if (!"true".equals(nillableValue) && !"1".equals(nillableValue)){
+                                    
+
+                                    java.lang.String content = reader.getElementText();
+                                    
+                                              object.setPostId(
+                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToString(content));
+                                            
+                                       } else {
+                                           
+                                           
+                                           reader.getElementText(); // throw away text nodes if any.
+                                       }
+                                      
+                                        reader.next();
+                                    
+                              }  // End of if for expected property start element
+                                
+                                else{
+                                    // A start element we are not expecting indicates an invalid parameter was passed
+                                    throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
+                                }
+                            
+                                    
+                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
+                                
                                     if (reader.isStartElement() && new javax.xml.namespace.QName("","id").equals(reader.getName())){
                                 
                                        nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
@@ -405,13 +493,11 @@
                                     java.lang.String content = reader.getElementText();
                                     
                                               object.setId(
-                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToInt(content));
+                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToString(content));
                                             
                                        } else {
                                            
                                            
-                                                   object.setId(java.lang.Integer.MIN_VALUE);
-                                               
                                            reader.getElementText(); // throw away text nodes if any.
                                        }
                                       

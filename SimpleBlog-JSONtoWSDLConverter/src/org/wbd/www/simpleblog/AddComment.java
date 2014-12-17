@@ -86,30 +86,90 @@
                             
 
                         /**
-                        * field for Kontent
+                        * field for Konten
                         */
 
                         
-                                    protected java.lang.String localKontent ;
+                                    protected java.lang.String localKonten ;
                                 
 
                            /**
                            * Auto generated getter method
                            * @return java.lang.String
                            */
-                           public  java.lang.String getKontent(){
-                               return localKontent;
+                           public  java.lang.String getKonten(){
+                               return localKonten;
                            }
 
                            
                         
                             /**
                                * Auto generated setter method
-                               * @param param Kontent
+                               * @param param Konten
                                */
-                               public void setKontent(java.lang.String param){
+                               public void setKonten(java.lang.String param){
                             
-                                            this.localKontent=param;
+                                            this.localKonten=param;
+                                    
+
+                               }
+                            
+
+                        /**
+                        * field for Tanggal
+                        */
+
+                        
+                                    protected java.util.Calendar localTanggal ;
+                                
+
+                           /**
+                           * Auto generated getter method
+                           * @return java.util.Calendar
+                           */
+                           public  java.util.Calendar getTanggal(){
+                               return localTanggal;
+                           }
+
+                           
+                        
+                            /**
+                               * Auto generated setter method
+                               * @param param Tanggal
+                               */
+                               public void setTanggal(java.util.Calendar param){
+                            
+                                            this.localTanggal=param;
+                                    
+
+                               }
+                            
+
+                        /**
+                        * field for PostId
+                        */
+
+                        
+                                    protected java.lang.String localPostId ;
+                                
+
+                           /**
+                           * Auto generated getter method
+                           * @return java.lang.String
+                           */
+                           public  java.lang.String getPostId(){
+                               return localPostId;
+                           }
+
+                           
+                        
+                            /**
+                               * Auto generated setter method
+                               * @param param PostId
+                               */
+                               public void setPostId(java.lang.String param){
+                            
+                                            this.localPostId=param;
                                     
 
                                }
@@ -211,10 +271,10 @@
                                    xmlWriter.writeEndElement();
                              
                                     namespace = "";
-                                    writeStartElement(null, namespace, "kontent", xmlWriter);
+                                    writeStartElement(null, namespace, "konten", xmlWriter);
                              
 
-                                          if (localKontent==null){
+                                          if (localKonten==null){
                                               // write the nil attribute
                                               
                                                      writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","nil","1",xmlWriter);
@@ -222,7 +282,43 @@
                                           }else{
 
                                         
-                                                   xmlWriter.writeCharacters(localKontent);
+                                                   xmlWriter.writeCharacters(localKonten);
+                                            
+                                          }
+                                    
+                                   xmlWriter.writeEndElement();
+                             
+                                    namespace = "";
+                                    writeStartElement(null, namespace, "tanggal", xmlWriter);
+                             
+
+                                          if (localTanggal==null){
+                                              // write the nil attribute
+                                              
+                                                     writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","nil","1",xmlWriter);
+                                                  
+                                          }else{
+
+                                        
+                                                   xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localTanggal));
+                                            
+                                          }
+                                    
+                                   xmlWriter.writeEndElement();
+                             
+                                    namespace = "";
+                                    writeStartElement(null, namespace, "postId", xmlWriter);
+                             
+
+                                          if (localPostId==null){
+                                              // write the nil attribute
+                                              
+                                                     writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","nil","1",xmlWriter);
+                                                  
+                                          }else{
+
+                                        
+                                                   xmlWriter.writeCharacters(localPostId);
                                             
                                           }
                                     
@@ -426,10 +522,22 @@
                                          org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localEmail));
                                     
                                       elementList.add(new javax.xml.namespace.QName("",
-                                                                      "kontent"));
+                                                                      "konten"));
                                  
-                                         elementList.add(localKontent==null?null:
-                                         org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localKontent));
+                                         elementList.add(localKonten==null?null:
+                                         org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localKonten));
+                                    
+                                      elementList.add(new javax.xml.namespace.QName("",
+                                                                      "tanggal"));
+                                 
+                                         elementList.add(localTanggal==null?null:
+                                         org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localTanggal));
+                                    
+                                      elementList.add(new javax.xml.namespace.QName("",
+                                                                      "postId"));
+                                 
+                                         elementList.add(localPostId==null?null:
+                                         org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localPostId));
                                     
 
                 return new org.apache.axis2.databinding.utils.reader.ADBXMLStreamReaderImpl(qName, elementList.toArray(), attribList.toArray());
@@ -567,7 +675,7 @@
                                     
                                     while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
                                 
-                                    if (reader.isStartElement() && new javax.xml.namespace.QName("","kontent").equals(reader.getName())){
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("","konten").equals(reader.getName())){
                                 
                                        nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
                                        if (!"true".equals(nillableValue) && !"1".equals(nillableValue)){
@@ -575,7 +683,65 @@
 
                                     java.lang.String content = reader.getElementText();
                                     
-                                              object.setKontent(
+                                              object.setKonten(
+                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToString(content));
+                                            
+                                       } else {
+                                           
+                                           
+                                           reader.getElementText(); // throw away text nodes if any.
+                                       }
+                                      
+                                        reader.next();
+                                    
+                              }  // End of if for expected property start element
+                                
+                                else{
+                                    // A start element we are not expecting indicates an invalid parameter was passed
+                                    throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
+                                }
+                            
+                                    
+                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
+                                
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("","tanggal").equals(reader.getName())){
+                                
+                                       nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
+                                       if (!"true".equals(nillableValue) && !"1".equals(nillableValue)){
+                                    
+
+                                    java.lang.String content = reader.getElementText();
+                                    
+                                              object.setTanggal(
+                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToDateTime(content));
+                                            
+                                       } else {
+                                           
+                                           
+                                           reader.getElementText(); // throw away text nodes if any.
+                                       }
+                                      
+                                        reader.next();
+                                    
+                              }  // End of if for expected property start element
+                                
+                                else{
+                                    // A start element we are not expecting indicates an invalid parameter was passed
+                                    throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
+                                }
+                            
+                                    
+                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
+                                
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("","postId").equals(reader.getName())){
+                                
+                                       nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
+                                       if (!"true".equals(nillableValue) && !"1".equals(nillableValue)){
+                                    
+
+                                    java.lang.String content = reader.getElementText();
+                                    
+                                              object.setPostId(
                                                     org.apache.axis2.databinding.utils.ConverterUtil.convertToString(content));
                                             
                                        } else {

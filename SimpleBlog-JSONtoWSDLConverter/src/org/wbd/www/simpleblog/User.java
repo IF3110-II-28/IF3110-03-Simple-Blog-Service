@@ -30,14 +30,14 @@
                         */
 
                         
-                                    protected int localId ;
+                                    protected java.lang.String localId ;
                                 
 
                            /**
                            * Auto generated getter method
-                           * @return int
+                           * @return java.lang.String
                            */
-                           public  int getId(){
+                           public  java.lang.String getId(){
                                return localId;
                            }
 
@@ -47,7 +47,7 @@
                                * Auto generated setter method
                                * @param param Id
                                */
-                               public void setId(int param){
+                               public void setId(java.lang.String param){
                             
                                             this.localId=param;
                                     
@@ -56,62 +56,62 @@
                             
 
                         /**
-                        * field for Nama
+                        * field for Username
                         * This was an Attribute!
                         */
 
                         
-                                    protected java.lang.String localNama ;
+                                    protected java.lang.String localUsername ;
                                 
 
                            /**
                            * Auto generated getter method
                            * @return java.lang.String
                            */
-                           public  java.lang.String getNama(){
-                               return localNama;
+                           public  java.lang.String getUsername(){
+                               return localUsername;
                            }
 
                            
                         
                             /**
                                * Auto generated setter method
-                               * @param param Nama
+                               * @param param Username
                                */
-                               public void setNama(java.lang.String param){
+                               public void setUsername(java.lang.String param){
                             
-                                            this.localNama=param;
+                                            this.localUsername=param;
                                     
 
                                }
                             
 
                         /**
-                        * field for Email
+                        * field for Password
                         * This was an Attribute!
                         */
 
                         
-                                    protected java.lang.String localEmail ;
+                                    protected java.lang.String localPassword ;
                                 
 
                            /**
                            * Auto generated getter method
                            * @return java.lang.String
                            */
-                           public  java.lang.String getEmail(){
-                               return localEmail;
+                           public  java.lang.String getPassword(){
+                               return localPassword;
                            }
 
                            
                         
                             /**
                                * Auto generated setter method
-                               * @param param Email
+                               * @param param Password
                                */
-                               public void setEmail(java.lang.String param){
+                               public void setPassword(java.lang.String param){
                             
-                                            this.localEmail=param;
+                                            this.localPassword=param;
                                     
 
                                }
@@ -207,8 +207,8 @@
                
                    }
                
-                                                   if (localId!=java.lang.Integer.MIN_VALUE) {
-                                               
+                                            if (localId != null){
+                                        
                                                 writeAttribute("",
                                                          "id",
                                                          org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localId), xmlWriter);
@@ -216,20 +216,20 @@
                                             
                                       }
                                     
-                                            if (localNama != null){
+                                            if (localUsername != null){
                                         
                                                 writeAttribute("",
-                                                         "nama",
-                                                         org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localNama), xmlWriter);
+                                                         "username",
+                                                         org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localUsername), xmlWriter);
 
                                             
                                       }
                                     
-                                            if (localEmail != null){
+                                            if (localPassword != null){
                                         
                                                 writeAttribute("",
-                                                         "email",
-                                                         org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localEmail), xmlWriter);
+                                                         "password",
+                                                         org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localPassword), xmlWriter);
 
                                             
                                       }
@@ -434,14 +434,14 @@
                                       attribList.add(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localId));
                                 
                             attribList.add(
-                            new javax.xml.namespace.QName("","nama"));
+                            new javax.xml.namespace.QName("","username"));
                             
-                                      attribList.add(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localNama));
+                                      attribList.add(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localUsername));
                                 
                             attribList.add(
-                            new javax.xml.namespace.QName("","email"));
+                            new javax.xml.namespace.QName("","password"));
                             
-                                      attribList.add(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localEmail));
+                                      attribList.add(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localPassword));
                                 
                             attribList.add(
                             new javax.xml.namespace.QName("","role"));
@@ -529,46 +529,44 @@
                          java.lang.String content = tempAttribId;
                         
                                                  object.setId(
-                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToInt(tempAttribId));
+                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToString(tempAttribId));
                                             
                     } else {
                        
-                                           object.setId(java.lang.Integer.MIN_VALUE);
-                                       
                     }
                     handledAttributes.add("id");
                     
-                    // handle attribute "nama"
-                    java.lang.String tempAttribNama =
+                    // handle attribute "username"
+                    java.lang.String tempAttribUsername =
                         
-                                reader.getAttributeValue(null,"nama");
+                                reader.getAttributeValue(null,"username");
                             
-                   if (tempAttribNama!=null){
-                         java.lang.String content = tempAttribNama;
+                   if (tempAttribUsername!=null){
+                         java.lang.String content = tempAttribUsername;
                         
-                                                 object.setNama(
-                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToString(tempAttribNama));
+                                                 object.setUsername(
+                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToString(tempAttribUsername));
                                             
                     } else {
                        
                     }
-                    handledAttributes.add("nama");
+                    handledAttributes.add("username");
                     
-                    // handle attribute "email"
-                    java.lang.String tempAttribEmail =
+                    // handle attribute "password"
+                    java.lang.String tempAttribPassword =
                         
-                                reader.getAttributeValue(null,"email");
+                                reader.getAttributeValue(null,"password");
                             
-                   if (tempAttribEmail!=null){
-                         java.lang.String content = tempAttribEmail;
+                   if (tempAttribPassword!=null){
+                         java.lang.String content = tempAttribPassword;
                         
-                                                 object.setEmail(
-                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToString(tempAttribEmail));
+                                                 object.setPassword(
+                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToString(tempAttribPassword));
                                             
                     } else {
                        
                     }
-                    handledAttributes.add("email");
+                    handledAttributes.add("password");
                     
                     // handle attribute "role"
                     java.lang.String tempAttribRole =

@@ -30,14 +30,14 @@
                         */
 
                         
-                                    protected int localId ;
+                                    protected java.lang.String localId ;
                                 
 
                            /**
                            * Auto generated getter method
-                           * @return int
+                           * @return java.lang.String
                            */
-                           public  int getId(){
+                           public  java.lang.String getId(){
                                return localId;
                            }
 
@@ -47,7 +47,7 @@
                                * Auto generated setter method
                                * @param param Id
                                */
-                               public void setId(int param){
+                               public void setId(java.lang.String param){
                             
                                             this.localId=param;
                                     
@@ -238,8 +238,8 @@
                
                    }
                
-                                                   if (localId!=java.lang.Integer.MIN_VALUE) {
-                                               
+                                            if (localId != null){
+                                        
                                                 writeAttribute("",
                                                          "id",
                                                          org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localId), xmlWriter);
@@ -574,12 +574,10 @@
                          java.lang.String content = tempAttribId;
                         
                                                  object.setId(
-                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToInt(tempAttribId));
+                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToString(tempAttribId));
                                             
                     } else {
                        
-                                           object.setId(java.lang.Integer.MIN_VALUE);
-                                       
                     }
                     handledAttributes.add("id");
                     

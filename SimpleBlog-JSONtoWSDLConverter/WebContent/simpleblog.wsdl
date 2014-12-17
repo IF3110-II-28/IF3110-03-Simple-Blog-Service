@@ -9,28 +9,28 @@
 
 			<xsd:complexType name="ArrayOfUsers">
 				<xsd:sequence>
-					<xsd:element name="listUsers" type="tns:User"
+					<xsd:element name="user" type="tns:User"
 						minOccurs="0" maxOccurs="unbounded"></xsd:element>
 				</xsd:sequence>
 			</xsd:complexType>
 
 			<xsd:complexType name="ArrayOfComments">
 				<xsd:sequence>
-					<xsd:element name="listComments" type="tns:Komentar"
+					<xsd:element name="komentar" type="tns:Komentar"
 						minOccurs="0" maxOccurs="unbounded"></xsd:element>
 				</xsd:sequence>
 			</xsd:complexType>
 
 			<xsd:complexType name="ArrayOfPosts">
 				<xsd:sequence>
-					<xsd:element name="listPosts" type="tns:Blogpost" minOccurs="0"
+					<xsd:element name="blogpost" type="tns:Blogpost" minOccurs="0"
 						maxOccurs="unbounded"></xsd:element>
 				</xsd:sequence>
 			</xsd:complexType>
 
 
 			<xsd:complexType name="Blogpost">
-				<xsd:attribute name="id" type="xsd:int"></xsd:attribute>
+				<xsd:attribute name="id" type="xsd:string"></xsd:attribute>
 				<xsd:attribute name="judul" type="xsd:string"></xsd:attribute>
 				<xsd:attribute name="konten" type="xsd:string"></xsd:attribute>
 				<xsd:attribute name="tanggal" type="xsd:dateTime"></xsd:attribute>
@@ -38,14 +38,14 @@
 			</xsd:complexType>
 
 			<xsd:complexType name="User">
-				<xsd:attribute name="id" type="xsd:int"></xsd:attribute>
-				<xsd:attribute name="nama" type="xsd:string"></xsd:attribute>
-				<xsd:attribute name="email" type="xsd:string"></xsd:attribute>
+				<xsd:attribute name="id" type="xsd:string"></xsd:attribute>
+				<xsd:attribute name="username" type="xsd:string"></xsd:attribute>
+				<xsd:attribute name="password" type="xsd:string"></xsd:attribute>
 				<xsd:attribute name="role" type="xsd:string"></xsd:attribute>
 			</xsd:complexType>
 
 			<xsd:complexType name="Komentar">
-				<xsd:attribute name="id" type="xsd:int"></xsd:attribute>
+				<xsd:attribute name="id" type="xsd:string"></xsd:attribute>
 				<xsd:attribute name="nama" type="xsd:string"></xsd:attribute>
 				<xsd:attribute name="email" type="xsd:string"></xsd:attribute>
 				<xsd:attribute name="konten" type="xsd:string"></xsd:attribute>
@@ -72,7 +72,7 @@
 	</wsdl:message>
 
 	<wsdl:message name="editPostRequest">
-		<wsdl:part name="id" type="xsd:int"></wsdl:part>
+		<wsdl:part name="id" type="xsd:string"></wsdl:part>
 		<wsdl:part name="judul" type="xsd:string"></wsdl:part>
 		<wsdl:part name="konten" type="xsd:string"></wsdl:part>
 		<wsdl:part name="tanggal" type="xsd:dateTime"></wsdl:part>
@@ -83,7 +83,7 @@
 	</wsdl:message>
 
 	<wsdl:message name="deletePostRequest">
-		<wsdl:part name="id" type="xsd:int"></wsdl:part>
+		<wsdl:part name="id" type="xsd:string"></wsdl:part>
 	</wsdl:message>
 
 	<wsdl:message name="deletePostResponse">
@@ -91,7 +91,7 @@
 	</wsdl:message>
 
 	<wsdl:message name="publishPostRequest">
-		<wsdl:part name="id" type="xsd:int"></wsdl:part>
+		<wsdl:part name="id" type="xsd:string"></wsdl:part>
 	</wsdl:message>
 
 	<wsdl:message name="publishPostResponse">
@@ -99,8 +99,8 @@
 	</wsdl:message>
 
 	<wsdl:message name="addUserRequest">
-		<wsdl:part name="nama" type="xsd:string"></wsdl:part>
-		<wsdl:part name="email" type="xsd:string"></wsdl:part>
+		<wsdl:part name="username" type="xsd:string"></wsdl:part>
+		<wsdl:part name="password" type="xsd:string"></wsdl:part>
 		<wsdl:part name="role" type="xsd:string"></wsdl:part>
 	</wsdl:message>
 
@@ -116,10 +116,10 @@
 	</wsdl:message>
 
 	<wsdl:message name="editUserRequest">
-		<wsdl:part name="id" type="xsd:int"></wsdl:part>
-		<wsdl:part name="nama" type="xsd:string"></wsdl:part>
+		<wsdl:part name="id" type="xsd:string"></wsdl:part>
+		<wsdl:part name="username" type="xsd:string"></wsdl:part>
+		<wsdl:part name="password" type="xsd:string"></wsdl:part>
 		<wsdl:part name="role" type="xsd:string"></wsdl:part>
-		<wsdl:part name="email" type="xsd:string"></wsdl:part>
 	</wsdl:message>
 
 	<wsdl:message name="editUserResponse">
@@ -127,7 +127,7 @@
 	</wsdl:message>
 
 	<wsdl:message name="deleteUserRequest">
-		<wsdl:part name="id" type="xsd:int"></wsdl:part>
+		<wsdl:part name="id" type="xsd:string"></wsdl:part>
 	</wsdl:message>
 
 	<wsdl:message name="deleteUserResponse">
@@ -137,7 +137,9 @@
 	<wsdl:message name="addCommentRequest">
 		<wsdl:part name="nama" type="xsd:string"></wsdl:part>
 		<wsdl:part name="email" type="xsd:string"></wsdl:part>
-		<wsdl:part name="kontent" type="xsd:string"></wsdl:part>
+		<wsdl:part name="konten" type="xsd:string"></wsdl:part>
+		<wsdl:part name="tanggal" type="xsd:dateTime"></wsdl:part>
+		<wsdl:part name="postId" type="xsd:string"></wsdl:part>
 	</wsdl:message>
 
 	<wsdl:message name="addCommentResponse">
@@ -145,14 +147,16 @@
 	</wsdl:message>
 
 	<wsdl:message name="listCommentRequest">
-
+		<wsdl:part name="postId" type="xsd:string"></wsdl:part>
 	</wsdl:message>
+	
 	<wsdl:message name="listCommentResponse">
 		<wsdl:part name="comments" type="tns:ArrayOfComments"></wsdl:part>
 	</wsdl:message>
 
 	<wsdl:message name="deleteCommentRequest">
-		<wsdl:part name="id" type="xsd:int"></wsdl:part>
+		<wsdl:part name="postId" type="xsd:string"></wsdl:part>
+		<wsdl:part name="id" type="xsd:string"></wsdl:part>
 	</wsdl:message>
 
 	<wsdl:message name="deleteCommentResponse">

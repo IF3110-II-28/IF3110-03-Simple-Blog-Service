@@ -26,60 +26,60 @@
             
 
                         /**
-                        * field for Nama
+                        * field for Username
                         */
 
                         
-                                    protected java.lang.String localNama ;
+                                    protected java.lang.String localUsername ;
                                 
 
                            /**
                            * Auto generated getter method
                            * @return java.lang.String
                            */
-                           public  java.lang.String getNama(){
-                               return localNama;
+                           public  java.lang.String getUsername(){
+                               return localUsername;
                            }
 
                            
                         
                             /**
                                * Auto generated setter method
-                               * @param param Nama
+                               * @param param Username
                                */
-                               public void setNama(java.lang.String param){
+                               public void setUsername(java.lang.String param){
                             
-                                            this.localNama=param;
+                                            this.localUsername=param;
                                     
 
                                }
                             
 
                         /**
-                        * field for Email
+                        * field for Password
                         */
 
                         
-                                    protected java.lang.String localEmail ;
+                                    protected java.lang.String localPassword ;
                                 
 
                            /**
                            * Auto generated getter method
                            * @return java.lang.String
                            */
-                           public  java.lang.String getEmail(){
-                               return localEmail;
+                           public  java.lang.String getPassword(){
+                               return localPassword;
                            }
 
                            
                         
                             /**
                                * Auto generated setter method
-                               * @param param Email
+                               * @param param Password
                                */
-                               public void setEmail(java.lang.String param){
+                               public void setPassword(java.lang.String param){
                             
-                                            this.localEmail=param;
+                                            this.localPassword=param;
                                     
 
                                }
@@ -175,10 +175,10 @@
                    }
                
                                     namespace = "";
-                                    writeStartElement(null, namespace, "nama", xmlWriter);
+                                    writeStartElement(null, namespace, "username", xmlWriter);
                              
 
-                                          if (localNama==null){
+                                          if (localUsername==null){
                                               // write the nil attribute
                                               
                                                      writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","nil","1",xmlWriter);
@@ -186,17 +186,17 @@
                                           }else{
 
                                         
-                                                   xmlWriter.writeCharacters(localNama);
+                                                   xmlWriter.writeCharacters(localUsername);
                                             
                                           }
                                     
                                    xmlWriter.writeEndElement();
                              
                                     namespace = "";
-                                    writeStartElement(null, namespace, "email", xmlWriter);
+                                    writeStartElement(null, namespace, "password", xmlWriter);
                              
 
-                                          if (localEmail==null){
+                                          if (localPassword==null){
                                               // write the nil attribute
                                               
                                                      writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","nil","1",xmlWriter);
@@ -204,7 +204,7 @@
                                           }else{
 
                                         
-                                                   xmlWriter.writeCharacters(localEmail);
+                                                   xmlWriter.writeCharacters(localPassword);
                                             
                                           }
                                     
@@ -414,16 +414,16 @@
 
                 
                                       elementList.add(new javax.xml.namespace.QName("",
-                                                                      "nama"));
+                                                                      "username"));
                                  
-                                         elementList.add(localNama==null?null:
-                                         org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localNama));
+                                         elementList.add(localUsername==null?null:
+                                         org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localUsername));
                                     
                                       elementList.add(new javax.xml.namespace.QName("",
-                                                                      "email"));
+                                                                      "password"));
                                  
-                                         elementList.add(localEmail==null?null:
-                                         org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localEmail));
+                                         elementList.add(localPassword==null?null:
+                                         org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localPassword));
                                     
                                       elementList.add(new javax.xml.namespace.QName("",
                                                                       "role"));
@@ -509,7 +509,7 @@
                                     
                                     while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
                                 
-                                    if (reader.isStartElement() && new javax.xml.namespace.QName("","nama").equals(reader.getName())){
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("","username").equals(reader.getName())){
                                 
                                        nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
                                        if (!"true".equals(nillableValue) && !"1".equals(nillableValue)){
@@ -517,7 +517,7 @@
 
                                     java.lang.String content = reader.getElementText();
                                     
-                                              object.setNama(
+                                              object.setUsername(
                                                     org.apache.axis2.databinding.utils.ConverterUtil.convertToString(content));
                                             
                                        } else {
@@ -538,7 +538,7 @@
                                     
                                     while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
                                 
-                                    if (reader.isStartElement() && new javax.xml.namespace.QName("","email").equals(reader.getName())){
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("","password").equals(reader.getName())){
                                 
                                        nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
                                        if (!"true".equals(nillableValue) && !"1".equals(nillableValue)){
@@ -546,7 +546,7 @@
 
                                     java.lang.String content = reader.getElementText();
                                     
-                                              object.setEmail(
+                                              object.setPassword(
                                                     org.apache.axis2.databinding.utils.ConverterUtil.convertToString(content));
                                             
                                        } else {

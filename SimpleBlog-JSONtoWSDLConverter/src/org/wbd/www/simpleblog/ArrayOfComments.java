@@ -25,21 +25,21 @@
             
 
                         /**
-                        * field for ListComments
+                        * field for Komentar
                         * This was an Array!
                         */
 
                         
-                                    protected org.wbd.www.simpleblog.Komentar[] localListComments ;
+                                    protected org.wbd.www.simpleblog.Komentar[] localKomentar ;
                                 
                            /*  This tracker boolean wil be used to detect whether the user called the set method
                           *   for this attribute. It will be used to determine whether to include this field
                            *   in the serialized XML
                            */
-                           protected boolean localListCommentsTracker = false ;
+                           protected boolean localKomentarTracker = false ;
 
-                           public boolean isListCommentsSpecified(){
-                               return localListCommentsTracker;
+                           public boolean isKomentarSpecified(){
+                               return localKomentarTracker;
                            }
 
                            
@@ -48,8 +48,8 @@
                            * Auto generated getter method
                            * @return org.wbd.www.simpleblog.Komentar[]
                            */
-                           public  org.wbd.www.simpleblog.Komentar[] getListComments(){
-                               return localListComments;
+                           public  org.wbd.www.simpleblog.Komentar[] getKomentar(){
+                               return localKomentar;
                            }
 
                            
@@ -58,24 +58,24 @@
 
                                
                               /**
-                               * validate the array for ListComments
+                               * validate the array for Komentar
                                */
-                              protected void validateListComments(org.wbd.www.simpleblog.Komentar[] param){
+                              protected void validateKomentar(org.wbd.www.simpleblog.Komentar[] param){
                              
                               }
 
 
                              /**
                               * Auto generated setter method
-                              * @param param ListComments
+                              * @param param Komentar
                               */
-                              public void setListComments(org.wbd.www.simpleblog.Komentar[] param){
+                              public void setKomentar(org.wbd.www.simpleblog.Komentar[] param){
                               
-                                   validateListComments(param);
+                                   validateKomentar(param);
 
-                               localListCommentsTracker = param != null;
+                               localKomentarTracker = param != null;
                                       
-                                      this.localListComments=param;
+                                      this.localKomentar=param;
                               }
 
                                
@@ -84,20 +84,20 @@
                              * Auto generated add method for the array for convenience
                              * @param param org.wbd.www.simpleblog.Komentar
                              */
-                             public void addListComments(org.wbd.www.simpleblog.Komentar param){
-                                   if (localListComments == null){
-                                   localListComments = new org.wbd.www.simpleblog.Komentar[]{};
+                             public void addKomentar(org.wbd.www.simpleblog.Komentar param){
+                                   if (localKomentar == null){
+                                   localKomentar = new org.wbd.www.simpleblog.Komentar[]{};
                                    }
 
                             
                                  //update the setting tracker
-                                localListCommentsTracker = true;
+                                localKomentarTracker = true;
                             
 
                                java.util.List list =
-                            org.apache.axis2.databinding.utils.ConverterUtil.toList(localListComments);
+                            org.apache.axis2.databinding.utils.ConverterUtil.toList(localKomentar);
                                list.add(param);
-                               this.localListComments =
+                               this.localKomentar =
                              (org.wbd.www.simpleblog.Komentar[])list.toArray(
                             new org.wbd.www.simpleblog.Komentar[list.size()]);
 
@@ -162,11 +162,11 @@
 
                
                    }
-                if (localListCommentsTracker){
-                                       if (localListComments!=null){
-                                            for (int i = 0;i < localListComments.length;i++){
-                                                if (localListComments[i] != null){
-                                                 localListComments[i].serialize(new javax.xml.namespace.QName("","listComments"),
+                if (localKomentarTracker){
+                                       if (localKomentar!=null){
+                                            for (int i = 0;i < localKomentar.length;i++){
+                                                if (localKomentar[i] != null){
+                                                 localKomentar[i].serialize(new javax.xml.namespace.QName("","komentar"),
                                                            xmlWriter);
                                                 } else {
                                                    
@@ -177,7 +177,7 @@
                                             }
                                      } else {
                                         
-                                               throw new org.apache.axis2.databinding.ADBException("listComments cannot be null!!");
+                                               throw new org.apache.axis2.databinding.ADBException("komentar cannot be null!!");
                                         
                                     }
                                  }
@@ -365,14 +365,14 @@
                  java.util.ArrayList elementList = new java.util.ArrayList();
                  java.util.ArrayList attribList = new java.util.ArrayList();
 
-                 if (localListCommentsTracker){
-                             if (localListComments!=null) {
-                                 for (int i = 0;i < localListComments.length;i++){
+                 if (localKomentarTracker){
+                             if (localKomentar!=null) {
+                                 for (int i = 0;i < localKomentar.length;i++){
 
-                                    if (localListComments[i] != null){
+                                    if (localKomentar[i] != null){
                                          elementList.add(new javax.xml.namespace.QName("",
-                                                                          "listComments"));
-                                         elementList.add(localListComments[i]);
+                                                                          "komentar"));
+                                         elementList.add(localKomentar[i]);
                                     } else {
                                         
                                                 // nothing to do
@@ -382,7 +382,7 @@
                                  }
                              } else {
                                  
-                                        throw new org.apache.axis2.databinding.ADBException("listComments cannot be null!!");
+                                        throw new org.apache.axis2.databinding.ADBException("komentar cannot be null!!");
                                     
                              }
 
@@ -467,7 +467,7 @@
                                     
                                     while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
                                 
-                                    if (reader.isStartElement() && new javax.xml.namespace.QName("","listComments").equals(reader.getName())){
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("","komentar").equals(reader.getName())){
                                 
                                     
                                     
@@ -489,7 +489,7 @@
                                                                 //two continuous end elements means we are exiting the xml structure
                                                                 loopDone1 = true;
                                                             } else {
-                                                                if (new javax.xml.namespace.QName("","listComments").equals(reader.getName())){
+                                                                if (new javax.xml.namespace.QName("","komentar").equals(reader.getName())){
                                                                     list1.add(org.wbd.www.simpleblog.Komentar.Factory.parse(reader));
                                                                         
                                                                 }else{
@@ -499,7 +499,7 @@
                                                         }
                                                         // call the converter utility  to convert and set the array
                                                         
-                                                        object.setListComments((org.wbd.www.simpleblog.Komentar[])
+                                                        object.setKomentar((org.wbd.www.simpleblog.Komentar[])
                                                             org.apache.axis2.databinding.utils.ConverterUtil.convertToArray(
                                                                 org.wbd.www.simpleblog.Komentar.class,
                                                                 list1));

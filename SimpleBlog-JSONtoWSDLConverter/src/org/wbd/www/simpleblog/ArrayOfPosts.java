@@ -25,21 +25,21 @@
             
 
                         /**
-                        * field for ListPosts
+                        * field for Blogpost
                         * This was an Array!
                         */
 
                         
-                                    protected org.wbd.www.simpleblog.Blogpost[] localListPosts ;
+                                    protected org.wbd.www.simpleblog.Blogpost[] localBlogpost ;
                                 
                            /*  This tracker boolean wil be used to detect whether the user called the set method
                           *   for this attribute. It will be used to determine whether to include this field
                            *   in the serialized XML
                            */
-                           protected boolean localListPostsTracker = false ;
+                           protected boolean localBlogpostTracker = false ;
 
-                           public boolean isListPostsSpecified(){
-                               return localListPostsTracker;
+                           public boolean isBlogpostSpecified(){
+                               return localBlogpostTracker;
                            }
 
                            
@@ -48,8 +48,8 @@
                            * Auto generated getter method
                            * @return org.wbd.www.simpleblog.Blogpost[]
                            */
-                           public  org.wbd.www.simpleblog.Blogpost[] getListPosts(){
-                               return localListPosts;
+                           public  org.wbd.www.simpleblog.Blogpost[] getBlogpost(){
+                               return localBlogpost;
                            }
 
                            
@@ -58,24 +58,24 @@
 
                                
                               /**
-                               * validate the array for ListPosts
+                               * validate the array for Blogpost
                                */
-                              protected void validateListPosts(org.wbd.www.simpleblog.Blogpost[] param){
+                              protected void validateBlogpost(org.wbd.www.simpleblog.Blogpost[] param){
                              
                               }
 
 
                              /**
                               * Auto generated setter method
-                              * @param param ListPosts
+                              * @param param Blogpost
                               */
-                              public void setListPosts(org.wbd.www.simpleblog.Blogpost[] param){
+                              public void setBlogpost(org.wbd.www.simpleblog.Blogpost[] param){
                               
-                                   validateListPosts(param);
+                                   validateBlogpost(param);
 
-                               localListPostsTracker = param != null;
+                               localBlogpostTracker = param != null;
                                       
-                                      this.localListPosts=param;
+                                      this.localBlogpost=param;
                               }
 
                                
@@ -84,20 +84,20 @@
                              * Auto generated add method for the array for convenience
                              * @param param org.wbd.www.simpleblog.Blogpost
                              */
-                             public void addListPosts(org.wbd.www.simpleblog.Blogpost param){
-                                   if (localListPosts == null){
-                                   localListPosts = new org.wbd.www.simpleblog.Blogpost[]{};
+                             public void addBlogpost(org.wbd.www.simpleblog.Blogpost param){
+                                   if (localBlogpost == null){
+                                   localBlogpost = new org.wbd.www.simpleblog.Blogpost[]{};
                                    }
 
                             
                                  //update the setting tracker
-                                localListPostsTracker = true;
+                                localBlogpostTracker = true;
                             
 
                                java.util.List list =
-                            org.apache.axis2.databinding.utils.ConverterUtil.toList(localListPosts);
+                            org.apache.axis2.databinding.utils.ConverterUtil.toList(localBlogpost);
                                list.add(param);
-                               this.localListPosts =
+                               this.localBlogpost =
                              (org.wbd.www.simpleblog.Blogpost[])list.toArray(
                             new org.wbd.www.simpleblog.Blogpost[list.size()]);
 
@@ -162,11 +162,11 @@
 
                
                    }
-                if (localListPostsTracker){
-                                       if (localListPosts!=null){
-                                            for (int i = 0;i < localListPosts.length;i++){
-                                                if (localListPosts[i] != null){
-                                                 localListPosts[i].serialize(new javax.xml.namespace.QName("","listPosts"),
+                if (localBlogpostTracker){
+                                       if (localBlogpost!=null){
+                                            for (int i = 0;i < localBlogpost.length;i++){
+                                                if (localBlogpost[i] != null){
+                                                 localBlogpost[i].serialize(new javax.xml.namespace.QName("","blogpost"),
                                                            xmlWriter);
                                                 } else {
                                                    
@@ -177,7 +177,7 @@
                                             }
                                      } else {
                                         
-                                               throw new org.apache.axis2.databinding.ADBException("listPosts cannot be null!!");
+                                               throw new org.apache.axis2.databinding.ADBException("blogpost cannot be null!!");
                                         
                                     }
                                  }
@@ -365,14 +365,14 @@
                  java.util.ArrayList elementList = new java.util.ArrayList();
                  java.util.ArrayList attribList = new java.util.ArrayList();
 
-                 if (localListPostsTracker){
-                             if (localListPosts!=null) {
-                                 for (int i = 0;i < localListPosts.length;i++){
+                 if (localBlogpostTracker){
+                             if (localBlogpost!=null) {
+                                 for (int i = 0;i < localBlogpost.length;i++){
 
-                                    if (localListPosts[i] != null){
+                                    if (localBlogpost[i] != null){
                                          elementList.add(new javax.xml.namespace.QName("",
-                                                                          "listPosts"));
-                                         elementList.add(localListPosts[i]);
+                                                                          "blogpost"));
+                                         elementList.add(localBlogpost[i]);
                                     } else {
                                         
                                                 // nothing to do
@@ -382,7 +382,7 @@
                                  }
                              } else {
                                  
-                                        throw new org.apache.axis2.databinding.ADBException("listPosts cannot be null!!");
+                                        throw new org.apache.axis2.databinding.ADBException("blogpost cannot be null!!");
                                     
                              }
 
@@ -467,7 +467,7 @@
                                     
                                     while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
                                 
-                                    if (reader.isStartElement() && new javax.xml.namespace.QName("","listPosts").equals(reader.getName())){
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("","blogpost").equals(reader.getName())){
                                 
                                     
                                     
@@ -489,7 +489,7 @@
                                                                 //two continuous end elements means we are exiting the xml structure
                                                                 loopDone1 = true;
                                                             } else {
-                                                                if (new javax.xml.namespace.QName("","listPosts").equals(reader.getName())){
+                                                                if (new javax.xml.namespace.QName("","blogpost").equals(reader.getName())){
                                                                     list1.add(org.wbd.www.simpleblog.Blogpost.Factory.parse(reader));
                                                                         
                                                                 }else{
@@ -499,7 +499,7 @@
                                                         }
                                                         // call the converter utility  to convert and set the array
                                                         
-                                                        object.setListPosts((org.wbd.www.simpleblog.Blogpost[])
+                                                        object.setBlogpost((org.wbd.www.simpleblog.Blogpost[])
                                                             org.apache.axis2.databinding.utils.ConverterUtil.convertToArray(
                                                                 org.wbd.www.simpleblog.Blogpost.class,
                                                                 list1));

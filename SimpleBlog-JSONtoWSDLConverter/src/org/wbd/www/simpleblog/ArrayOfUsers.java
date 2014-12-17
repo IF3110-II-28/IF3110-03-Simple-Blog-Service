@@ -25,21 +25,21 @@
             
 
                         /**
-                        * field for ListUsers
+                        * field for User
                         * This was an Array!
                         */
 
                         
-                                    protected org.wbd.www.simpleblog.User[] localListUsers ;
+                                    protected org.wbd.www.simpleblog.User[] localUser ;
                                 
                            /*  This tracker boolean wil be used to detect whether the user called the set method
                           *   for this attribute. It will be used to determine whether to include this field
                            *   in the serialized XML
                            */
-                           protected boolean localListUsersTracker = false ;
+                           protected boolean localUserTracker = false ;
 
-                           public boolean isListUsersSpecified(){
-                               return localListUsersTracker;
+                           public boolean isUserSpecified(){
+                               return localUserTracker;
                            }
 
                            
@@ -48,8 +48,8 @@
                            * Auto generated getter method
                            * @return org.wbd.www.simpleblog.User[]
                            */
-                           public  org.wbd.www.simpleblog.User[] getListUsers(){
-                               return localListUsers;
+                           public  org.wbd.www.simpleblog.User[] getUser(){
+                               return localUser;
                            }
 
                            
@@ -58,24 +58,24 @@
 
                                
                               /**
-                               * validate the array for ListUsers
+                               * validate the array for User
                                */
-                              protected void validateListUsers(org.wbd.www.simpleblog.User[] param){
+                              protected void validateUser(org.wbd.www.simpleblog.User[] param){
                              
                               }
 
 
                              /**
                               * Auto generated setter method
-                              * @param param ListUsers
+                              * @param param User
                               */
-                              public void setListUsers(org.wbd.www.simpleblog.User[] param){
+                              public void setUser(org.wbd.www.simpleblog.User[] param){
                               
-                                   validateListUsers(param);
+                                   validateUser(param);
 
-                               localListUsersTracker = param != null;
+                               localUserTracker = param != null;
                                       
-                                      this.localListUsers=param;
+                                      this.localUser=param;
                               }
 
                                
@@ -84,20 +84,20 @@
                              * Auto generated add method for the array for convenience
                              * @param param org.wbd.www.simpleblog.User
                              */
-                             public void addListUsers(org.wbd.www.simpleblog.User param){
-                                   if (localListUsers == null){
-                                   localListUsers = new org.wbd.www.simpleblog.User[]{};
+                             public void addUser(org.wbd.www.simpleblog.User param){
+                                   if (localUser == null){
+                                   localUser = new org.wbd.www.simpleblog.User[]{};
                                    }
 
                             
                                  //update the setting tracker
-                                localListUsersTracker = true;
+                                localUserTracker = true;
                             
 
                                java.util.List list =
-                            org.apache.axis2.databinding.utils.ConverterUtil.toList(localListUsers);
+                            org.apache.axis2.databinding.utils.ConverterUtil.toList(localUser);
                                list.add(param);
-                               this.localListUsers =
+                               this.localUser =
                              (org.wbd.www.simpleblog.User[])list.toArray(
                             new org.wbd.www.simpleblog.User[list.size()]);
 
@@ -162,11 +162,11 @@
 
                
                    }
-                if (localListUsersTracker){
-                                       if (localListUsers!=null){
-                                            for (int i = 0;i < localListUsers.length;i++){
-                                                if (localListUsers[i] != null){
-                                                 localListUsers[i].serialize(new javax.xml.namespace.QName("","listUsers"),
+                if (localUserTracker){
+                                       if (localUser!=null){
+                                            for (int i = 0;i < localUser.length;i++){
+                                                if (localUser[i] != null){
+                                                 localUser[i].serialize(new javax.xml.namespace.QName("","user"),
                                                            xmlWriter);
                                                 } else {
                                                    
@@ -177,7 +177,7 @@
                                             }
                                      } else {
                                         
-                                               throw new org.apache.axis2.databinding.ADBException("listUsers cannot be null!!");
+                                               throw new org.apache.axis2.databinding.ADBException("user cannot be null!!");
                                         
                                     }
                                  }
@@ -365,14 +365,14 @@
                  java.util.ArrayList elementList = new java.util.ArrayList();
                  java.util.ArrayList attribList = new java.util.ArrayList();
 
-                 if (localListUsersTracker){
-                             if (localListUsers!=null) {
-                                 for (int i = 0;i < localListUsers.length;i++){
+                 if (localUserTracker){
+                             if (localUser!=null) {
+                                 for (int i = 0;i < localUser.length;i++){
 
-                                    if (localListUsers[i] != null){
+                                    if (localUser[i] != null){
                                          elementList.add(new javax.xml.namespace.QName("",
-                                                                          "listUsers"));
-                                         elementList.add(localListUsers[i]);
+                                                                          "user"));
+                                         elementList.add(localUser[i]);
                                     } else {
                                         
                                                 // nothing to do
@@ -382,7 +382,7 @@
                                  }
                              } else {
                                  
-                                        throw new org.apache.axis2.databinding.ADBException("listUsers cannot be null!!");
+                                        throw new org.apache.axis2.databinding.ADBException("user cannot be null!!");
                                     
                              }
 
@@ -467,7 +467,7 @@
                                     
                                     while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
                                 
-                                    if (reader.isStartElement() && new javax.xml.namespace.QName("","listUsers").equals(reader.getName())){
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("","user").equals(reader.getName())){
                                 
                                     
                                     
@@ -489,7 +489,7 @@
                                                                 //two continuous end elements means we are exiting the xml structure
                                                                 loopDone1 = true;
                                                             } else {
-                                                                if (new javax.xml.namespace.QName("","listUsers").equals(reader.getName())){
+                                                                if (new javax.xml.namespace.QName("","user").equals(reader.getName())){
                                                                     list1.add(org.wbd.www.simpleblog.User.Factory.parse(reader));
                                                                         
                                                                 }else{
@@ -499,7 +499,7 @@
                                                         }
                                                         // call the converter utility  to convert and set the array
                                                         
-                                                        object.setListUsers((org.wbd.www.simpleblog.User[])
+                                                        object.setUser((org.wbd.www.simpleblog.User[])
                                                             org.apache.axis2.databinding.utils.ConverterUtil.convertToArray(
                                                                 org.wbd.www.simpleblog.User.class,
                                                                 list1));

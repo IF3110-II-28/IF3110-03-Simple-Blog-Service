@@ -30,14 +30,14 @@
                         */
 
                         
-                                    protected int localId ;
+                                    protected java.lang.String localId ;
                                 
 
                            /**
                            * Auto generated getter method
-                           * @return int
+                           * @return java.lang.String
                            */
-                           public  int getId(){
+                           public  java.lang.String getId(){
                                return localId;
                            }
 
@@ -47,7 +47,7 @@
                                * Auto generated setter method
                                * @param param Id
                                */
-                               public void setId(int param){
+                               public void setId(java.lang.String param){
                             
                                             this.localId=param;
                                     
@@ -207,13 +207,18 @@
                                     namespace = "";
                                     writeStartElement(null, namespace, "id", xmlWriter);
                              
-                                               if (localId==java.lang.Integer.MIN_VALUE) {
-                                           
-                                                         writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","nil","1",xmlWriter);
-                                                      
-                                               } else {
-                                                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localId));
-                                               }
+
+                                          if (localId==null){
+                                              // write the nil attribute
+                                              
+                                                     writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","nil","1",xmlWriter);
+                                                  
+                                          }else{
+
+                                        
+                                                   xmlWriter.writeCharacters(localId);
+                                            
+                                          }
                                     
                                    xmlWriter.writeEndElement();
                              
@@ -459,9 +464,9 @@
                                       elementList.add(new javax.xml.namespace.QName("",
                                                                       "id"));
                                  
-                                elementList.add(
-                                   org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localId));
-                            
+                                         elementList.add(localId==null?null:
+                                         org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localId));
+                                    
                                       elementList.add(new javax.xml.namespace.QName("",
                                                                       "judul"));
                                  
@@ -567,13 +572,11 @@
                                     java.lang.String content = reader.getElementText();
                                     
                                               object.setId(
-                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToInt(content));
+                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToString(content));
                                             
                                        } else {
                                            
                                            
-                                                   object.setId(java.lang.Integer.MIN_VALUE);
-                                               
                                            reader.getElementText(); // throw away text nodes if any.
                                        }
                                       

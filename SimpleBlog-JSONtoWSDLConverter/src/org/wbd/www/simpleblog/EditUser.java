@@ -30,14 +30,14 @@
                         */
 
                         
-                                    protected int localId ;
+                                    protected java.lang.String localId ;
                                 
 
                            /**
                            * Auto generated getter method
-                           * @return int
+                           * @return java.lang.String
                            */
-                           public  int getId(){
+                           public  java.lang.String getId(){
                                return localId;
                            }
 
@@ -47,7 +47,7 @@
                                * Auto generated setter method
                                * @param param Id
                                */
-                               public void setId(int param){
+                               public void setId(java.lang.String param){
                             
                                             this.localId=param;
                                     
@@ -56,30 +56,60 @@
                             
 
                         /**
-                        * field for Nama
+                        * field for Username
                         */
 
                         
-                                    protected java.lang.String localNama ;
+                                    protected java.lang.String localUsername ;
                                 
 
                            /**
                            * Auto generated getter method
                            * @return java.lang.String
                            */
-                           public  java.lang.String getNama(){
-                               return localNama;
+                           public  java.lang.String getUsername(){
+                               return localUsername;
                            }
 
                            
                         
                             /**
                                * Auto generated setter method
-                               * @param param Nama
+                               * @param param Username
                                */
-                               public void setNama(java.lang.String param){
+                               public void setUsername(java.lang.String param){
                             
-                                            this.localNama=param;
+                                            this.localUsername=param;
+                                    
+
+                               }
+                            
+
+                        /**
+                        * field for Password
+                        */
+
+                        
+                                    protected java.lang.String localPassword ;
+                                
+
+                           /**
+                           * Auto generated getter method
+                           * @return java.lang.String
+                           */
+                           public  java.lang.String getPassword(){
+                               return localPassword;
+                           }
+
+                           
+                        
+                            /**
+                               * Auto generated setter method
+                               * @param param Password
+                               */
+                               public void setPassword(java.lang.String param){
+                            
+                                            this.localPassword=param;
                                     
 
                                }
@@ -110,36 +140,6 @@
                                public void setRole(java.lang.String param){
                             
                                             this.localRole=param;
-                                    
-
-                               }
-                            
-
-                        /**
-                        * field for Email
-                        */
-
-                        
-                                    protected java.lang.String localEmail ;
-                                
-
-                           /**
-                           * Auto generated getter method
-                           * @return java.lang.String
-                           */
-                           public  java.lang.String getEmail(){
-                               return localEmail;
-                           }
-
-                           
-                        
-                            /**
-                               * Auto generated setter method
-                               * @param param Email
-                               */
-                               public void setEmail(java.lang.String param){
-                            
-                                            this.localEmail=param;
                                     
 
                                }
@@ -207,21 +207,8 @@
                                     namespace = "";
                                     writeStartElement(null, namespace, "id", xmlWriter);
                              
-                                               if (localId==java.lang.Integer.MIN_VALUE) {
-                                           
-                                                         writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","nil","1",xmlWriter);
-                                                      
-                                               } else {
-                                                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localId));
-                                               }
-                                    
-                                   xmlWriter.writeEndElement();
-                             
-                                    namespace = "";
-                                    writeStartElement(null, namespace, "nama", xmlWriter);
-                             
 
-                                          if (localNama==null){
+                                          if (localId==null){
                                               // write the nil attribute
                                               
                                                      writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","nil","1",xmlWriter);
@@ -229,7 +216,43 @@
                                           }else{
 
                                         
-                                                   xmlWriter.writeCharacters(localNama);
+                                                   xmlWriter.writeCharacters(localId);
+                                            
+                                          }
+                                    
+                                   xmlWriter.writeEndElement();
+                             
+                                    namespace = "";
+                                    writeStartElement(null, namespace, "username", xmlWriter);
+                             
+
+                                          if (localUsername==null){
+                                              // write the nil attribute
+                                              
+                                                     writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","nil","1",xmlWriter);
+                                                  
+                                          }else{
+
+                                        
+                                                   xmlWriter.writeCharacters(localUsername);
+                                            
+                                          }
+                                    
+                                   xmlWriter.writeEndElement();
+                             
+                                    namespace = "";
+                                    writeStartElement(null, namespace, "password", xmlWriter);
+                             
+
+                                          if (localPassword==null){
+                                              // write the nil attribute
+                                              
+                                                     writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","nil","1",xmlWriter);
+                                                  
+                                          }else{
+
+                                        
+                                                   xmlWriter.writeCharacters(localPassword);
                                             
                                           }
                                     
@@ -248,24 +271,6 @@
 
                                         
                                                    xmlWriter.writeCharacters(localRole);
-                                            
-                                          }
-                                    
-                                   xmlWriter.writeEndElement();
-                             
-                                    namespace = "";
-                                    writeStartElement(null, namespace, "email", xmlWriter);
-                             
-
-                                          if (localEmail==null){
-                                              // write the nil attribute
-                                              
-                                                     writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","nil","1",xmlWriter);
-                                                  
-                                          }else{
-
-                                        
-                                                   xmlWriter.writeCharacters(localEmail);
                                             
                                           }
                                     
@@ -459,26 +464,26 @@
                                       elementList.add(new javax.xml.namespace.QName("",
                                                                       "id"));
                                  
-                                elementList.add(
-                                   org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localId));
-                            
+                                         elementList.add(localId==null?null:
+                                         org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localId));
+                                    
                                       elementList.add(new javax.xml.namespace.QName("",
-                                                                      "nama"));
+                                                                      "username"));
                                  
-                                         elementList.add(localNama==null?null:
-                                         org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localNama));
+                                         elementList.add(localUsername==null?null:
+                                         org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localUsername));
+                                    
+                                      elementList.add(new javax.xml.namespace.QName("",
+                                                                      "password"));
+                                 
+                                         elementList.add(localPassword==null?null:
+                                         org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localPassword));
                                     
                                       elementList.add(new javax.xml.namespace.QName("",
                                                                       "role"));
                                  
                                          elementList.add(localRole==null?null:
                                          org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localRole));
-                                    
-                                      elementList.add(new javax.xml.namespace.QName("",
-                                                                      "email"));
-                                 
-                                         elementList.add(localEmail==null?null:
-                                         org.apache.axis2.databinding.utils.ConverterUtil.convertToString(localEmail));
                                     
 
                 return new org.apache.axis2.databinding.utils.reader.ADBXMLStreamReaderImpl(qName, elementList.toArray(), attribList.toArray());
@@ -567,13 +572,11 @@
                                     java.lang.String content = reader.getElementText();
                                     
                                               object.setId(
-                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToInt(content));
+                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToString(content));
                                             
                                        } else {
                                            
                                            
-                                                   object.setId(java.lang.Integer.MIN_VALUE);
-                                               
                                            reader.getElementText(); // throw away text nodes if any.
                                        }
                                       
@@ -589,7 +592,7 @@
                                     
                                     while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
                                 
-                                    if (reader.isStartElement() && new javax.xml.namespace.QName("","nama").equals(reader.getName())){
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("","username").equals(reader.getName())){
                                 
                                        nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
                                        if (!"true".equals(nillableValue) && !"1".equals(nillableValue)){
@@ -597,7 +600,36 @@
 
                                     java.lang.String content = reader.getElementText();
                                     
-                                              object.setNama(
+                                              object.setUsername(
+                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToString(content));
+                                            
+                                       } else {
+                                           
+                                           
+                                           reader.getElementText(); // throw away text nodes if any.
+                                       }
+                                      
+                                        reader.next();
+                                    
+                              }  // End of if for expected property start element
+                                
+                                else{
+                                    // A start element we are not expecting indicates an invalid parameter was passed
+                                    throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
+                                }
+                            
+                                    
+                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
+                                
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("","password").equals(reader.getName())){
+                                
+                                       nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
+                                       if (!"true".equals(nillableValue) && !"1".equals(nillableValue)){
+                                    
+
+                                    java.lang.String content = reader.getElementText();
+                                    
+                                              object.setPassword(
                                                     org.apache.axis2.databinding.utils.ConverterUtil.convertToString(content));
                                             
                                        } else {
@@ -627,35 +659,6 @@
                                     java.lang.String content = reader.getElementText();
                                     
                                               object.setRole(
-                                                    org.apache.axis2.databinding.utils.ConverterUtil.convertToString(content));
-                                            
-                                       } else {
-                                           
-                                           
-                                           reader.getElementText(); // throw away text nodes if any.
-                                       }
-                                      
-                                        reader.next();
-                                    
-                              }  // End of if for expected property start element
-                                
-                                else{
-                                    // A start element we are not expecting indicates an invalid parameter was passed
-                                    throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
-                                }
-                            
-                                    
-                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
-                                
-                                    if (reader.isStartElement() && new javax.xml.namespace.QName("","email").equals(reader.getName())){
-                                
-                                       nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
-                                       if (!"true".equals(nillableValue) && !"1".equals(nillableValue)){
-                                    
-
-                                    java.lang.String content = reader.getElementText();
-                                    
-                                              object.setEmail(
                                                     org.apache.axis2.databinding.utils.ConverterUtil.convertToString(content));
                                             
                                        } else {
